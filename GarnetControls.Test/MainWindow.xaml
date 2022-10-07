@@ -1,0 +1,17 @@
+﻿<GarnetControls:GarnetWindow
+    x:Class="GarnetControls.Test.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:GarnetControls="clr-namespace:GarnetControls;assembly=GarnetControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:GarnetControls.Test"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid>
+        <GarnetControls:GarnetButton
+            Width="120"
+            Height="20"
+            Content="Button" />
+    </Grid>
+
+</GarnetControls:GarnetWindow>
