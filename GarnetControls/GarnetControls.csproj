@@ -4,6 +4,19 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <Title>GarnetControls</Title>
+    <Authors>uaquax</Authors>
+    <Description>This is my WPF .NET controls library</Description>
+    <PackageIcon>ghost.jpg</PackageIcon>
+    <FileVersion></FileVersion>
+    <Version>0.0.1</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Source\Avatars\ghost.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

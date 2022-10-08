@@ -7,20 +7,21 @@ using System.Windows.Interop;
 
 namespace GarnetControls
 {
-    public class GarnetWindow : System.Windows.Window
+    public class Window : System.Windows.Window
     {
         private bool _mouseMove;
-        private GarnetButton minimizeButton;
-        private GarnetButton maximizeButton;
-        private GarnetButton closeButton;
+        private TitleButton minimizeButton;
+        private TitleButton maximizeButton;
+        private TitleButton closeButton;
+        private TextBlock titleText;
         private Border title;
 
-        static GarnetWindow()
+        static Window()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(GarnetWindow), new FrameworkPropertyMetadata(typeof(GarnetWindow)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(Window), new FrameworkPropertyMetadata(typeof(Window)));
         }
 
-        public GarnetWindow()
+        public Window()
         {
             SourceInitialized += Window_SourceInitialized;
         }
@@ -38,10 +39,11 @@ namespace GarnetControls
 
         public override void OnApplyTemplate()
         {
-            minimizeButton = GetRequiredTemplateChild<GarnetButton>("minimizeButton");
-            maximizeButton = GetRequiredTemplateChild<GarnetButton>("maximizeButton");
-            closeButton = GetRequiredTemplateChild<GarnetButton>("closeButton");
+            minimizeButton = GetRequiredTemplateChild<TitleButton>("minimizeButton");
+            maximizeButton = GetRequiredTemplateChild<TitleButton>("maximizeButton");
+            closeButton = GetRequiredTemplateChild<TitleButton>("closeButton");
             title = GetRequiredTemplateChild<Border>("title");
+            titleText = GetRequiredTemplateChild<TextBlock>("Title");
 
             if (minimizeButton != null)
             {
@@ -53,6 +55,13 @@ namespace GarnetControls
                 title.MouseDown += TitleMouseDown;
                 title.MouseUp += TitleMouseUp;
                 title.MouseMove += TitleMouseMove;
+            }
+
+            if (titleText != null)
+            {
+                titleText.MouseDown += TitleMouseDown;
+                titleText.MouseUp += TitleMouseUp;
+                titleText.MouseMove += TitleMouseMove;
             }
 
             if (maximizeButton != null)
