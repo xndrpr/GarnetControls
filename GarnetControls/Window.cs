@@ -5,7 +5,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Interop;
-using System.Windows.Shell;
 
 namespace GarnetControls
 {
@@ -17,8 +16,6 @@ namespace GarnetControls
         private TitleButton closeButton;
         private TextBlock titleText;
         private Border title;
-
-        public Thickness BorderThickness { get; set; } = new Thickness(3, 3, 3, 3);
 
         #region Properties
 
@@ -70,7 +67,7 @@ namespace GarnetControls
             };
 
 
-            title.SetBinding(VisibilityProperty, showTitleBinding);
+            titleText.SetBinding(VisibilityProperty, showTitleBinding);
 
 
             if (minimizeButton != null)

@@ -120,7 +120,8 @@
                                 x:Name="Title"
                                 Margin="10,5,0,0"
                                 Foreground="White"
-                                Text="{TemplateBinding Title}" />
+                                Text="{TemplateBinding Title}"
+                                Visibility="Hidden" />
                         </StackPanel>
 
                         <!--#endregion-->
