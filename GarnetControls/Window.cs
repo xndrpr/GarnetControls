@@ -3,7 +3,9 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Interop;
+using System.Windows.Shell;
 
 namespace GarnetControls
 {
@@ -15,6 +17,21 @@ namespace GarnetControls
         private TitleButton closeButton;
         private TextBlock titleText;
         private Border title;
+
+        public Thickness BorderThickness { get; set; } = new Thickness(3, 3, 3, 3);
+
+        #region Properties
+
+        public static DependencyProperty ShowTitleProperty = DependencyProperty.Register("ShowTitle", typeof(bool), typeof(Window), new PropertyMetadata(false));
+
+        public bool ShowTitle
+        {
+            get { return (bool)GetValue(ShowTitleProperty); }
+            set { SetValue(ShowTitleProperty, value); }
+        }
+
+
+        #endregion
 
         static Window()
         {
@@ -44,6 +61,17 @@ namespace GarnetControls
             closeButton = GetRequiredTemplateChild<TitleButton>("closeButton");
             title = GetRequiredTemplateChild<Border>("title");
             titleText = GetRequiredTemplateChild<TextBlock>("Title");
+
+            var showTitleBinding = new Binding() 
+            { 
+                Path = new PropertyPath(nameof(ShowTitle)),
+                Source = this,
+                Converter = new BooleanToVisibilityConverter()
+            };
+
+
+            title.SetBinding(VisibilityProperty, showTitleBinding);
+
 
             if (minimizeButton != null)
             {
@@ -115,10 +143,12 @@ namespace GarnetControls
             switch (WindowState)
             {
                 case WindowState.Maximized:
+                    BorderThickness = new Thickness(3, 3, 3, 3);
                     WindowState = WindowState.Normal;
                     break;
                 case WindowState.Normal:
                     WindowState = WindowState.Maximized;
+                    BorderThickness = new Thickness(3, 0, 3, 3);
                     break;
             }
         }

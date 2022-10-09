@@ -75,10 +75,12 @@
         <Setter Property="Background" Value="#2f3136" />
         <Setter Property="Height" Value="450" />
         <Setter Property="Width" Value="850" />
+        <Setter Property="MinHeight" Value="250" />
+        <Setter Property="MinWidth" Value="650" />
         <Setter Property="Title" Value="GarnetWindow" />
         <Setter Property="WindowStyle" Value="None" />
-        <Setter Property="AllowsTransparency" Value="True" />
-        <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
+        <Setter Property="AllowsTransparency" Value="False" />
+        <Setter Property="ResizeMode" Value="CanResize" />
 
         <Setter Property="Template">
             <Setter.Value>
@@ -134,6 +136,13 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CaptionHeight="0" ResizeBorderThickness="3 0 3 3" />
+            </Setter.Value>
+        </Setter>
+
     </Style>
 
     <!--#endregion-->
