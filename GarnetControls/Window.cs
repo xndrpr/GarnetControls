@@ -66,7 +66,6 @@ namespace GarnetControls
                 Converter = new BooleanToVisibilityConverter()
             };
 
-
             titleText.SetBinding(VisibilityProperty, showTitleBinding);
 
 
