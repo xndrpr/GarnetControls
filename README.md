@@ -1,4 +1,4 @@
-# Markdown File
+# GarnetControls
 
 # Controls
 * Window - GarnetControls.Controls.Window
