@@ -147,7 +147,7 @@
 
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="0" ResizeBorderThickness="3 0 3 3" />
+                <WindowChrome CaptionHeight="0" ResizeBorderThickness="5 0 5 5" />
             </Setter.Value>
         </Setter>
 
@@ -155,7 +155,7 @@
 
     <!--#endregion-->
 
-    <!--  TODO: Create a NumericUpDown control  -->
+    <!--  !DONE  -->
 
     <!--#region NumericUpDown-->
 

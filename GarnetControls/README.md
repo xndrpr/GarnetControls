@@ -1,4 +1,4 @@
-﻿# Markdown File
+﻿# GarnetControls 
 
 # Controls
 * Window - GarnetControls.Controls.Window
@@ -56,7 +56,7 @@ This is a button like in the title.
 <gc:TitleButton>Title Button</gc:Button>
 ```
 #### NumericUpDown
-This is a button like in the title.
+This is a simple numeric up down control
 
 ```xml
 <gc:NumericUpDown MinValue="0" MaxValue="100"/>
