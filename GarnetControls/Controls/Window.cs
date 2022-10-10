@@ -6,7 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Interop;
 
-namespace GarnetControls
+namespace GarnetControls.Controls
 {
     public class Window : System.Windows.Window
     {
@@ -42,7 +42,7 @@ namespace GarnetControls
 
         private void Window_SourceInitialized(object? sender, EventArgs e)
         {
-            IntPtr mWindowHandle = (new WindowInteropHelper(this)).Handle;
+            IntPtr mWindowHandle = new WindowInteropHelper(this).Handle;
             HwndSource.FromHwnd(mWindowHandle).AddHook(new HwndSourceHook(WindowSizing.WindowProc));
         }
 
@@ -59,13 +59,12 @@ namespace GarnetControls
             title = GetRequiredTemplateChild<Border>("title");
             titleText = GetRequiredTemplateChild<TextBlock>("Title");
 
-            var showTitleBinding = new Binding() 
-            { 
+            var showTitleBinding = new Binding()
+            {
                 Path = new PropertyPath(nameof(ShowTitle)),
                 Source = this,
                 Converter = new BooleanToVisibilityConverter()
             };
-
             titleText.SetBinding(VisibilityProperty, showTitleBinding);
 
 
@@ -112,7 +111,7 @@ namespace GarnetControls
         {
             if (e.ClickCount == 2)
             {
-                if ((ResizeMode == ResizeMode.CanResize) || (ResizeMode == ResizeMode.CanResizeWithGrip))
+                if (ResizeMode == ResizeMode.CanResize || ResizeMode == ResizeMode.CanResizeWithGrip)
                 {
                     maximizeButton_Click(sender, e);
                 }

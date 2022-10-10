@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace GarnetControls
+namespace GarnetControls.Controls
 {
     public class TitleButton : System.Windows.Controls.Button
     {

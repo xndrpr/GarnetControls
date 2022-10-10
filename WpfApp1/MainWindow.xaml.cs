@@ -1,6 +1,8 @@
-﻿namespace WpfApp1
+﻿using GarnetControls.Controls;
+
+namespace WpfApp1
 {
-    public partial class MainWindow : GarnetControls.Window
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {

@@ -11,4 +11,11 @@
     <ProjectReference Include="..\GarnetControls\GarnetControls.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ghost.jpg">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+
 </Project>
