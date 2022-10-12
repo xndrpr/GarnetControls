@@ -2,7 +2,7 @@
 
 namespace GarnetControls.Controls
 {
-    public class TitleButton : System.Windows.Controls.Button
+    internal class TitleButton : Button
     {
         static TitleButton()
         {

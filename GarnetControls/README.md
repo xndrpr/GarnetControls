@@ -3,7 +3,6 @@
 # Controls
 * Window - GarnetControls.Controls.Window
 * Button - GarnetControls.Controls.Button
-* TitleButton - GarnetControls.Controls.TitleButton
 * NumericUpDown - GarnetControls.Controls.NumericUpDown
 
 
@@ -50,11 +49,6 @@ namespace YourNamespace
 <gc:Button>Button</gc:Button>
 ```
 
-#### TitleButton
-This is a button like in the title.
-```xml
-<gc:TitleButton>Title Button</gc:Button>
-```
 #### NumericUpDown
 This is a simple numeric up down control
 

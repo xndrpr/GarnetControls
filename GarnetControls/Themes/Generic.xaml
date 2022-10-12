@@ -9,9 +9,8 @@
     <Style TargetType="{x:Type controls:TitleButton}">
         <Setter Property="Foreground" Value="#b4b6b7" />
         <Setter Property="Width" Value="40" />
-        <Setter Property="Background" Value="#2f3136" />
+        <Setter Property="Background" Value="#44474e" />
         <Setter Property="BorderThickness" Value="0" />
-
 
         <Setter Property="Template">
             <Setter.Value>
@@ -26,6 +25,39 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#3c3f45" />
+                <Setter Property="Foreground" Value="#fff" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="#b4b6b7" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!--#endregion-->
+
+    <!--  !DONE  -->
+    <!--#region CloseButton-->
+
+    <Style TargetType="{x:Type controls:CloseButton}">
+        <Setter Property="Foreground" Value="#b4b6b7" />
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Background" Value="#44474e" />
+        <Setter Property="BorderThickness" Value="0" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:CloseButton}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#f64f64" />
                 <Setter Property="Foreground" Value="#fff" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
@@ -101,7 +133,7 @@
                         <Border
                             x:Name="title"
                             Grid.Row="0"
-                            Background="#2f3136" />
+                            Background="#44474e" />
 
                         <StackPanel
                             Grid.Row="0"
@@ -115,7 +147,7 @@
                                 x:Name="maximizeButton"
                                 Width="40"
                                 Content="⛶" />
-                            <controls:TitleButton
+                            <controls:CloseButton
                                 x:Name="closeButton"
                                 Width="40"
                                 Content="✕" />
@@ -147,10 +179,26 @@
 
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="0" ResizeBorderThickness="5 0 5 5" />
+                <WindowChrome CaptionHeight="0" ResizeBorderThickness="8 8 8 8" />
             </Setter.Value>
         </Setter>
 
+        <Style.Triggers>
+            <Trigger Property="WindowState" Value="Maximized">
+                <Setter Property="WindowChrome.WindowChrome">
+                    <Setter.Value>
+                        <WindowChrome CaptionHeight="0" ResizeBorderThickness="8 0 8 8" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="WindowState" Value="Normal">
+                <Setter Property="WindowChrome.WindowChrome">
+                    <Setter.Value>
+                        <WindowChrome CaptionHeight="0" ResizeBorderThickness="8 8 8 8" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <!--#endregion-->
@@ -197,29 +245,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-    <!--#endregion-->
-
-    <!--  TODO: Create a avatar control  -->
-    <!--#region Avatar-->
-
-    <Style TargetType="{x:Type controls:Avatar}" />
-
-    <!--#endregion-->
-
-    <!--#endregion-->
-
-    <!--  TODO: Create a color picker control  -->
-    <!--#region ColorPicker-->
-
-    <Style TargetType="{x:Type controls:ColorPicker}" />
-
-    <!--#endregion-->
-
-    <!--  TODO: Create a color dialog  -->
-    <!--#region ColorDialog-->
-
-
 
     <!--#endregion-->
 

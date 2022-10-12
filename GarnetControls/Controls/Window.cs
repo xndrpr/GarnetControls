@@ -13,7 +13,7 @@ namespace GarnetControls.Controls
         private bool _mouseMove;
         private TitleButton minimizeButton;
         private TitleButton maximizeButton;
-        private TitleButton closeButton;
+        private CloseButton closeButton;
         private TextBlock titleText;
         private Border title;
 
@@ -55,7 +55,7 @@ namespace GarnetControls.Controls
         {
             minimizeButton = GetRequiredTemplateChild<TitleButton>("minimizeButton");
             maximizeButton = GetRequiredTemplateChild<TitleButton>("maximizeButton");
-            closeButton = GetRequiredTemplateChild<TitleButton>("closeButton");
+            closeButton = GetRequiredTemplateChild<CloseButton>("closeButton");
             title = GetRequiredTemplateChild<Border>("title");
             titleText = GetRequiredTemplateChild<TextBlock>("Title");
 
@@ -138,12 +138,10 @@ namespace GarnetControls.Controls
             switch (WindowState)
             {
                 case WindowState.Maximized:
-                    BorderThickness = new Thickness(3, 3, 3, 3);
                     WindowState = WindowState.Normal;
                     break;
                 case WindowState.Normal:
                     WindowState = WindowState.Maximized;
-                    BorderThickness = new Thickness(3, 0, 3, 3);
                     break;
             }
         }
