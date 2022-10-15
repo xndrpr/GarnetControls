@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GarnetControls", "GarnetControls\GarnetControls.csproj", "{D4D2A713-DC09-4787-B009-A3819537116A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{FA83E1CE-8E1E-4CB5-AAF1-54B26534F4BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarnetControls.Test", "GarnetControls.Test\GarnetControls.Test.csproj", "{9ECE9DF1-983D-47FE-93CF-A960500F527F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D4D2A713-DC09-4787-B009-A3819537116A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4D2A713-DC09-4787-B009-A3819537116A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4D2A713-DC09-4787-B009-A3819537116A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA83E1CE-8E1E-4CB5-AAF1-54B26534F4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA83E1CE-8E1E-4CB5-AAF1-54B26534F4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA83E1CE-8E1E-4CB5-AAF1-54B26534F4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA83E1CE-8E1E-4CB5-AAF1-54B26534F4BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ECE9DF1-983D-47FE-93CF-A960500F527F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECE9DF1-983D-47FE-93CF-A960500F527F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECE9DF1-983D-47FE-93CF-A960500F527F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECE9DF1-983D-47FE-93CF-A960500F527F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

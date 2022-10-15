@@ -3,7 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:GarnetControls.Controls">
 
-    <!--  !DONE  -->
     <!--#region TitleButton-->
 
     <Style TargetType="{x:Type controls:TitleButton}">
@@ -36,7 +35,6 @@
 
     <!--#endregion-->
 
-    <!--  !DONE  -->
     <!--#region CloseButton-->
 
     <Style TargetType="{x:Type controls:CloseButton}">
@@ -69,7 +67,6 @@
 
     <!--#endregion-->
 
-    <!--  !DONE  -->
     <!--#region Button-->
 
     <Style TargetType="{x:Type controls:Button}">
@@ -103,7 +100,6 @@
 
     <!--#endregion-->
 
-    <!--  !DONE  -->
     <!--#region Window-->
 
     <Style TargetType="{x:Type controls:Window}">
@@ -155,7 +151,8 @@
                         <StackPanel Grid.Row="0" HorizontalAlignment="Left">
                             <TextBlock
                                 x:Name="Title"
-                                Margin="10,5,0,0"
+                                Margin="5,1,0,0"
+                                VerticalAlignment="Center"
                                 Foreground="White"
                                 Text="{TemplateBinding Title}"
                                 Visibility="Hidden" />
@@ -203,8 +200,6 @@
 
     <!--#endregion-->
 
-    <!--  !DONE  -->
-
     <!--#region NumericUpDown-->
 
     <Style TargetType="{x:Type controls:NumericUpDown}">
@@ -247,5 +242,58 @@
     </Style>
 
     <!--#endregion-->
+
+    <!--#region SideBarItem-->
+
+    <Style TargetType="{x:Type controls:SideBarItem}">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Cursor" Value="Hand" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:SideBarItem}">
+                    <Border
+                        x:Name="border"
+                        Width="auto"
+                        Margin="{TemplateBinding Margin}"
+                        Padding="{TemplateBinding Padding}"
+                        Background="#343A40"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <StackPanel Orientation="Horizontal">
+                            <Path
+                                x:Name="icon"
+                                Width="18"
+                                Height="18"
+                                Data="{TemplateBinding Icon}"
+                                Fill="#b4b6b7"
+                                Stretch="Uniform" />
+                            <TextBlock
+                                x:Name="text"
+                                Margin="5,0,0,0"
+                                FontSize="18"
+                                Foreground="#b4b6b7"
+                                Text="{TemplateBinding Text}" />
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#3b4147" />
+                        </Trigger>
+
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="icon" Property="Fill" Value="#fff" />
+                            <Setter TargetName="text" Property="Foreground" Value="#fff" />
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--#endregion-->
+
 
 </ResourceDictionary>
