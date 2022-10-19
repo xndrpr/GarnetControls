@@ -4,7 +4,7 @@
 * Window - GarnetControls.Controls.Window
 * Button - GarnetControls.Controls.Button
 * NumericUpDown - GarnetControls.Controls.NumericUpDown
-
+* SideBarItem - GarnetControls.Controls.SideBarItem
 
 # Get started
 ## 1 - Add the reference to the controls
@@ -16,7 +16,6 @@
 ## 2 - Use the controls
 
 #### Window
-<img src="https://i.postimg.cc/L54PXtkN/UGCleaner-EKCsom3pj-F.png"></img>
 ```xml
 <gc:Window></gc:Window>
 ```
@@ -26,7 +25,6 @@
 </gc:Window>
 ```
 
-<img src="https://i.postimg.cc/d0MTdPm7/UGCleaner-u-SRpoh-OTDt.png"></img>
 
 ```c#
 namespace YourNamespace
@@ -43,7 +41,6 @@ namespace YourNamespace
 ```
 
 #### Button
-<img src="https://i.postimg.cc/0NpK0WcV/UGCleaner-rd5-Of1-Lk-Ft.png"/>
 
 ```xml
 <gc:Button>Button</gc:Button>
@@ -55,3 +52,5 @@ This is a simple numeric up down control
 ```xml
 <gc:NumericUpDown MinValue="0" MaxValue="100"/>
 ```
+
+#### SideBarItem

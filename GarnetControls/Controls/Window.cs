@@ -179,8 +179,8 @@ namespace GarnetControls.Controls
                 WindowSizing.POINT lMousePosition;
                 WindowSizing.GetCursorPos(out lMousePosition);
 
-                Left = lMousePosition.X - targetHorizontal;
-                Top = lMousePosition.Y - targetVertical;
+                Left = (lMousePosition.X - targetHorizontal) / 1.35;
+                Top = lMousePosition.Y - targetVertical - 14;
 
                 DragMove();
             }

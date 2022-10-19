@@ -243,15 +243,15 @@
 
     <!--#endregion-->
 
-    <!--#region SideBarItem-->
+    <!--#region ListBoxItem-->
 
-    <Style TargetType="{x:Type controls:SideBarItem}">
+    <Style TargetType="{x:Type controls:ListBoxItem}">
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="Cursor" Value="Hand" />
 
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type controls:SideBarItem}">
+                <ControlTemplate TargetType="{x:Type controls:ListBoxItem}">
                     <Border
                         x:Name="border"
                         Width="auto"
@@ -260,17 +260,21 @@
                         Background="#343A40"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel FlowDirection="{TemplateBinding FlowDirection}" Orientation="Horizontal">
                             <Path
                                 x:Name="icon"
                                 Width="18"
                                 Height="18"
+                                Margin="{TemplateBinding Margin}"
                                 Data="{TemplateBinding Icon}"
                                 Fill="#b4b6b7"
-                                Stretch="Uniform" />
+                                IsEnabled="{TemplateBinding ShowIcon}"
+                                Stretch="Uniform"
+                                Visibility="{TemplateBinding IconVisibility}" />
                             <TextBlock
                                 x:Name="text"
                                 Margin="5,0,0,0"
+                                HorizontalAlignment="{TemplateBinding ContentAlignment}"
                                 FontSize="18"
                                 Foreground="#b4b6b7"
                                 Text="{TemplateBinding Text}" />
