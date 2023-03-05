@@ -176,7 +176,7 @@
 
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="0" ResizeBorderThickness="8 8 8 8" />
+                <WindowChrome CaptionHeight="0" ResizeBorderThickness="4 4 4 4" />
             </Setter.Value>
         </Setter>
 
@@ -184,14 +184,14 @@
             <Trigger Property="WindowState" Value="Maximized">
                 <Setter Property="WindowChrome.WindowChrome">
                     <Setter.Value>
-                        <WindowChrome CaptionHeight="0" ResizeBorderThickness="8 0 8 8" />
+                        <WindowChrome CaptionHeight="0" ResizeBorderThickness="4 0 4 4" />
                     </Setter.Value>
                 </Setter>
             </Trigger>
             <Trigger Property="WindowState" Value="Normal">
                 <Setter Property="WindowChrome.WindowChrome">
                     <Setter.Value>
-                        <WindowChrome CaptionHeight="0" ResizeBorderThickness="8 8 8 8" />
+                        <WindowChrome CaptionHeight="0" ResizeBorderThickness="4 4 4 4" />
                     </Setter.Value>
                 </Setter>
             </Trigger>

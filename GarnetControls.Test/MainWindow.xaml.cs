@@ -2,7 +2,7 @@
 
 namespace GarnetControls.Test
 {
-    public partial class MainWindow : GarnetControls.Controls.Window
+    public partial class MainWindow : Controls.Window
     {
         public MainWindow()
         {
