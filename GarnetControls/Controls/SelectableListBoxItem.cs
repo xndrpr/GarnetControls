@@ -32,6 +32,15 @@ namespace GarnetControls.Controls
         public static readonly DependencyProperty IconProperty = DependencyProperty.Register("Icon", typeof(Geometry), typeof(SelectableListBoxItem), new PropertyMetadata(null));
 
 
+        public CornerRadius Radius
+        {
+            get { return (CornerRadius)GetValue(RadiusProperty); }
+            set { SetValue(RadiusProperty, value); }
+        }
+
+        public static readonly DependencyProperty RadiusProperty = DependencyProperty.Register("Radius", typeof(CornerRadius), typeof(ListBoxItem), null);
+
+
 
         public string Text
         {
