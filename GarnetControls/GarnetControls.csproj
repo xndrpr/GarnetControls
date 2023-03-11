@@ -8,9 +8,9 @@
     <Authors>uaquax</Authors>
     <Description>This is my WPF .NET controls library</Description>
     <PackageIcon>ghost.jpg</PackageIcon>
-    <FileVersion>1.1.0</FileVersion>
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <FileVersion>1.1.2</FileVersion>
+    <Version>1.1.2</Version>
+    <AssemblyVersion>1.1.2</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

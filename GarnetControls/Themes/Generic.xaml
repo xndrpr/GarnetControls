@@ -259,7 +259,8 @@
                         Padding="{TemplateBinding Padding}"
                         Background="#343A40"
                         BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}">
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding Radius}">
                         <StackPanel FlowDirection="{TemplateBinding FlowDirection}" Orientation="Horizontal">
                             <Path
                                 x:Name="icon"
@@ -358,6 +359,5 @@
     </Style>
 
     <!--#endregion-->
-
 
 </ResourceDictionary>

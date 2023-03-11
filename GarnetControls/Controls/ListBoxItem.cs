@@ -22,7 +22,6 @@ namespace GarnetControls.Controls
         public static readonly DependencyProperty TargetProperty = DependencyProperty.Register("Target", typeof(string), typeof(ListBoxItem), new PropertyMetadata(null));
 
 
-
         public Geometry Icon
         {
             get { return (Geometry)GetValue(IconProperty); }
@@ -30,6 +29,15 @@ namespace GarnetControls.Controls
         }
 
         public static readonly DependencyProperty IconProperty = DependencyProperty.Register("Icon", typeof(Geometry), typeof(ListBoxItem), new PropertyMetadata(null));
+
+
+        public CornerRadius Radius
+        {
+            get { return (CornerRadius)GetValue(RadiusProperty); }
+            set { SetValue(RadiusProperty, value); }
+        }
+
+        public static readonly DependencyProperty RadiusProperty = DependencyProperty.Register("Radius", typeof(CornerRadius), typeof(ListBoxItem), null);
 
 
 
@@ -48,8 +56,6 @@ namespace GarnetControls.Controls
         }
 
         public static readonly DependencyProperty ShowIconProperty = DependencyProperty.Register("ShowIcon", typeof(bool), typeof(ListBoxItem), new PropertyMetadata(true));
-
-
 
 
         public Visibility IconVisibility
